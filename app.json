@@ -1,7 +1,7 @@
 {
     "name": "AiRisk",
     "description": "An API for flight delay risk assessment.",
-    "repository": "https://github.com/heroku/python-getting-started",
+    "repository": "https://github.com/heroku/secure-meadow-32607",
     "keywords": [
         "python",
         "flask"
