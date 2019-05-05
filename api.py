@@ -3,7 +3,6 @@ from keras.models import load_model
 import tensorflow as tf
 import numpy as np
 import requests
-import json
 import datetime as dt
 
 lat_long = np.load("lat_long.npy")
@@ -78,7 +77,6 @@ def home(airline_code, year, month, date, day_of_week):
                     precipitation = jsdata["list"][daysfromtoday]["snow"]["3h"]
                 else:
                     precipitation = jsdata["list"][daysfromtoday]["snow"]["1h"]
-
 
             weather_output = [
                 jsdata["list"][daysfromtoday]["clouds"]["all"],  # clouds
