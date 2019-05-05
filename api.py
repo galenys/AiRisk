@@ -55,7 +55,7 @@ def home(airline_code, year, month, date, day_of_week):
         + APIKEY
     )
     response = requests.get(request)
-    jsdata = response.json()
+    jsdata = jsonify(response)
 
     # Calculate daysfromtoday
     precipitation = 0
