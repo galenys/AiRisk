@@ -4,6 +4,7 @@ import tensorflow as tf
 import numpy as np
 import requests
 import datetime as dt
+import json
 
 lat_long = np.load("lat_long.npy")
 model = load_model("time_model.h5")
@@ -54,7 +55,7 @@ def home(airline_code, year, month, date, day_of_week):
         + APIKEY
     )
     response = requests.get(request)
-    jsdata = jsonify(response)
+    jsdata = response.json()
 
     # Calculate daysfromtoday
     precipitation = 0
